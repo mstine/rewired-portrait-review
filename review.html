@@ -32,6 +32,20 @@
   .variant-id { font-family: "SF Mono", Menlo, monospace; font-size: 11px; color: var(--neon-magenta); letter-spacing: 0.1em; }
   .pair-note { max-width: 820px; margin: 48px 0 0; padding: 20px 24px; background: rgba(255, 179, 71, 0.08); border-left: 3px solid var(--fusion-gold); border-radius: 4px; font-size: 13px; color: rgba(255, 244, 230, 0.75); }
   .pair-note strong { color: var(--fusion-gold); }
+  .pairing-section { margin: 0 0 56px; padding: 28px 32px; background: linear-gradient(135deg, rgba(122, 44, 255, 0.14), rgba(255, 179, 71, 0.06)); border: 1px solid rgba(91, 231, 255, 0.2); border-radius: 12px; }
+  .pairing-section h2 { margin: 0 0 6px; font-size: 22px; color: var(--fusion-gold); font-weight: 700; letter-spacing: -0.01em; }
+  .pairing-section .pair-intro { margin: 0 0 28px; font-size: 14px; color: rgba(255, 244, 230, 0.72); max-width: 720px; }
+  .pair-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; align-items: start; }
+  @media (max-width: 900px) { .pair-row { grid-template-columns: 1fr; } }
+  .pair-row:last-child { margin-bottom: 0; }
+  .pair-half { background: rgba(10, 15, 60, 0.3); border: 1px solid rgba(91, 231, 255, 0.15); border-radius: 12px; overflow: hidden; }
+  .pair-half-image { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; }
+  .pair-half-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pair-half-body { padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; font-family: "SF Mono", Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; }
+  .pair-label-matt { color: var(--ion-glow); }
+  .pair-label-jaye { color: var(--neon-magenta); }
+  .pair-role { color: rgba(255, 244, 230, 0.4); }
+  .pair-row-heading { grid-column: 1 / -1; font-family: "SF Mono", Menlo, monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255, 244, 230, 0.5); margin: 0 0 4px; }
   footer { padding: 32px 48px 48px; font-size: 11px; color: rgba(255, 244, 230, 0.4); font-family: "SF Mono", Menlo, monospace; border-top: 1px solid rgba(91, 231, 255, 0.1); line-height: 1.8; }
 </style>
 </head>
@@ -47,6 +61,47 @@
 </header>
 
 <main>
+  <section class="pairing-section">
+    <h2>Host pairing preview</h2>
+    <p class="pair-intro">Matt's locked author portrait next to each of Jaye Anne's R1 variants. The pairing test: do they read as co-hosts of the same show? Same illustrated medium, same chiaroscuro signature (cyan left / magenta right), same ARCÆON palette family.</p>
+
+    <div class="pair-row">
+      <p class="pair-row-heading">Pair 1 · Matt × Jaye Anne v1</p>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/matt-portrait.jpg" alt="Matt author portrait"></div>
+        <div class="pair-half-body"><span class="pair-label-matt">MATT</span><span class="pair-role">locked</span></div>
+      </div>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/jaye-anne-headshot-v1.jpg" alt="Jaye Anne v1"></div>
+        <div class="pair-half-body"><span class="pair-label-jaye">JAYE ANNE</span><span class="pair-role">v1</span></div>
+      </div>
+    </div>
+
+    <div class="pair-row">
+      <p class="pair-row-heading">Pair 2 · Matt × Jaye Anne v2</p>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/matt-portrait.jpg" alt="Matt author portrait"></div>
+        <div class="pair-half-body"><span class="pair-label-matt">MATT</span><span class="pair-role">locked</span></div>
+      </div>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/jaye-anne-headshot-v2.jpg" alt="Jaye Anne v2"></div>
+        <div class="pair-half-body"><span class="pair-label-jaye">JAYE ANNE</span><span class="pair-role">v2</span></div>
+      </div>
+    </div>
+
+    <div class="pair-row">
+      <p class="pair-row-heading">Pair 3 · Matt × Jaye Anne v3</p>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/matt-portrait.jpg" alt="Matt author portrait"></div>
+        <div class="pair-half-body"><span class="pair-label-matt">MATT</span><span class="pair-role">locked</span></div>
+      </div>
+      <div class="pair-half">
+        <div class="pair-half-image"><img src="images/jaye-anne-headshot-v3.jpg" alt="Jaye Anne v3"></div>
+        <div class="pair-half-body"><span class="pair-label-jaye">JAYE ANNE</span><span class="pair-role">v3</span></div>
+      </div>
+    </div>
+  </section>
+
   <div class="concept">
     <p class="concept-label">Round 1 · Concept</p>
     <p>Take Jaye Anne's existing photographic headshot (curly warm-brown hair, tortoiseshell round glasses pulled down with her right hand, playful peek-over-the-glasses expression, pearl necklace, multi-colored plaid blazer, cream blouse) and re-medium it as a dark graphic novel / occult editorial plate author portrait in the Feral Architecture brand palette — matching the lighting signature of Matt's existing author portrait so the two read as a pair on the Rewired landing page.</p>
@@ -91,7 +146,7 @@
   </div>
 
   <div class="pair-note">
-    <p><strong>Pairing check:</strong> Once a winner is picked, open Matt's final portrait (<code>~/Documents/Business-Brand/Feral-Architecture/portraits/2026-04-13-author-headshot/final/author-headshot.jpg</code>) side-by-side with the Jaye Anne winner. The two should feel like hosts of the same show — matched medium, matched lighting signature (cyan left / magenta right), matched palette discipline. If they feel like they're from different shows, iterate with reference continuity.</p>
+    <p><strong>Pick by pair, not by portrait alone.</strong> The variant that looks best on its own is not always the one that pairs best with Matt. When in doubt, scroll back to the Host Pairing Preview at the top — that's the real decision surface.</p>
   </div>
 </main>
 
